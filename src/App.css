@@ -1,21 +1,80 @@
 body {
+  margin: 0;
   height: 100vh;
-  display: flex ;
- justify-content: center;
- align-items: center;
-}
-.weather-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  max-width: 400x;
-  margin: 20px auto;
-  padding: 20px;
-  background-color: #ADDBF8;
-  border-radius:8px ;
-  box-shadow: 0 0 10px rgba(0,0,0.1) ;
+  /* Background image */
+  background: url("https://images.unsplash.com/photo-1501973801540-537f08ccae7b")
+    no-repeat center center/cover;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.weather-container {
+  width: 350px;
+  padding: 25px;
+
+  /* Glass effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+
   text-align: center;
-  
+
+  transition: 0.3s ease;
 }
 
-.weather-info{
+.weather-container:hover {
+  transform: scale(1.03);
+}
+
+.weather-info {
   margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+
+  background: transparent; /* no dark box */
+
+  color: #000; /* 👈 black text */
+
+  backdrop-filter: blur(5px);
+}
+.weather-info h3 {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000; /* force black */
+}
+
+.weather-info p {
+  margin: 5px 0;
+  font-size: 16px;
+  color: #000; /* force black */
+}
+input {
+  padding: 10px;
+  width: 70%;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  margin-bottom: 12px; /* 👈 adds space BELOW input */
+}
+
+button {
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background: #0077ff;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;        /* 👈 forces new line */
+  margin: 0 auto;        /* 👈 center button */
+}
+button:hover {
+  background: #005ad1;
 }

@@ -22,26 +22,28 @@ function Weather() {
   const handleClick = () => {
     fetchWeather();
   };
-  return (
-    <div className="weather-container">
-      <input
-        type="text"
-        placeholder="Enter the city Name "
-        value={city}
-        onChange={handleCitychange}
-      ></input>
-      <button onClick={handleClick}> Get Weather</button>
-      {weather && (
-        <>
-          {" "}
-          <div className="weather-info" />
-          <h3>{weather.data.name}</h3>
-          <p>Temperature is {weather.data.main.temp} K</p>
-          <p>Weather Description :{weather.data.weather[0].description}</p>
-        </>
-      )}
-    </div>
-  );
+return (
+  <div className="weather-container">
+    <input
+      type="text"
+      placeholder="Enter the city Name"
+      value={city}
+      onChange={handleCitychange}
+    />
+
+    <button onClick={handleClick}>Get Weather</button>
+
+    {weather && (
+      <div className="weather-info">
+        <h3>{weather.data.name}</h3>
+        <p>Temperature is {weather.data.main.temp} K</p>
+        <p>
+          Weather Description: {weather.data.weather[0].description}
+        </p>
+      </div>
+    )}
+  </div>
+);
 }
 
 export default Weather;
